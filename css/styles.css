@@ -6,7 +6,7 @@ body {
 
 .top {
     padding: 8px 0;
-    background: #ebebeb;
+    background: #f4bb44;
     position: relative;
 }
 
@@ -59,11 +59,11 @@ body {
 
 .top_right ul li a:hover {
     color: #333;
+    text-decoration: none;
 }
 
 .header_one {
-    background: #fff;
-    box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.15);
+    background: #000;
     padding: 15px 0;
 }
 
@@ -72,7 +72,7 @@ body {
 }
 
 .navbar-nav > li:hover > a, .navbar-nav > li.active > a {
-    color: #ffb600 !important;
+    color: #f4bb44 !important;
     position: relative;
 }
 
@@ -89,17 +89,25 @@ body {
     transition: 350ms;
 }
 
+a.nav-link {
+    color: #fff;
+}
+
 .resume .btn-info {
     padding: 12px 25px !important;
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 600;
     border-radius: 3px;
     line-height: normal;
     margin-top: 5px;
+    background: #f4bb44;
+    color: #000 !important;
+    outline: none;
 }
 
 .resume .btn-info:hover {
-    background: #272d33;
-    color: #ffb600;
+    background: #f4bb44;
+    color: #000 !important;
 }
 
 ul.navbar-nav > li.resume:hover > a:after {
@@ -110,6 +118,12 @@ ul.navbar-nav > li.resume:hover > a:after {
 .logo img {
     width: auto;
     height: 50px;
+    border-radius: 50%;
+}
+
+a.name {
+    text-decoration: none;
+    color: #fff;
 }
 
 .bg-img-1 {
@@ -138,9 +152,7 @@ ul.navbar-nav > li.resume:hover > a:after {
 .box-slider-text {
     background: 111;
     display: block;
-    /* padding: 20px 30px; */
     max-width: 650px;
-    /* justify-content: end; */
 }
 
 .slide-title {
@@ -167,7 +179,7 @@ ul.navbar-nav > li.resume:hover > a:after {
 .slide-title-box {
     font-size: 16px;
     line-height: 30px;
-    background: #ffb600;
+    background: #f4bb44;
 }
 
 @media only screen and (max-width: 991px) {
@@ -233,16 +245,12 @@ ul.navbar-nav > li.resume:hover > a:after {
 .row-content {
   padding: 50px 0;
   border-bottom: 1px ridge;
-  min-height: 200px; }
+  min-height: 200px;
+ }
 
 
 .about_section-item {
     column-gap: 3rem;
-}
-
-.about_section-item p i {
-    color: #f9a826;
-    font-size: 1.1rem;
 }
 
 @media only screen and (max-width: 992px) {
@@ -280,15 +288,13 @@ ul.navbar-nav > li.resume:hover > a:after {
     }
 }
 
-.about_content-title {
-    font-weight: 700;
-    font-size: 2.8rem;
-    margin-bottom: 3rem;
-}
-
 @media only screen and (max-width: 768px){
     .about_content-title {
-        font-size: 2.4rem;
+        margin-top: 2rem;
+    }
+
+    .about_content-title, .section_subtitle, .section_title {
+        text-align: center;
     }
 }
 
@@ -302,10 +308,10 @@ ul.navbar-nav > li.resume:hover > a:after {
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
     font-size: 1rem;
-    background: rgba(153,153,153,0.2);
+    background: #272d33;
     border-radius: 5px;
     font-weight: 600;
-    color: #777;
+    color: #f4bb44;
 
 }
 
