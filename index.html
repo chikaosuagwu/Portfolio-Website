@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -21,6 +21,10 @@
 </head>
 
 <body>
+    <button onclick="topFunction()" id="scrollBtn" title="Scroll to top" class="btn btn-secondary">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
     <div class="top">
         <div class="container">
             <div class="row">
@@ -35,7 +39,7 @@
                     <ul class="list-unstyled">
                         <li>
                             <a href="https://github.com/chikaosuagwu" target="_blank" title="Github">
-                                <span class="social-icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                                <span><i class="fa fa-github" aria-hidden="true"></i></span>
                             </a>
                             <a href="https://www.linkedin.com/in/chikaosuagwu" target="_blank" title="LinkedIn">
                                 <span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
@@ -61,7 +65,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-sm p-0">
+                        <nav class="navbar navbar-expand-sm navbar-dark p-0">
 
                             <div class="logo d-flex align-items-center">
                                 <span>
@@ -71,33 +75,40 @@
                                 </span>
 
                                 <div>
-                                    <a class="name" href="#" title="logo">
+                                    <a class="name" href="#" title="">
                                         <h6>CHIKA OSUAGWU</h6>
                                     </a>
                                 </div>
                             </div>
 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                                 data-target="#navbarItem">
-                                <span class="navbar-toggler-icon"></span>
+                                <span class="icon-bar top-bar"></span>
+                                <span class="icon-bar middle-bar"></span>
+                                <span class="icon-bar bottom-bar"></span>
                             </button>
 
                             <div class="collapse navbar-collapse justify-content-end" id="navbarItem">
                                 <ul class="nav navbar-nav ml-auto align-items-center">
                                     <li class="navbar-item">
-                                        <a class="nav-link" href="#about&skills" title="">About</a>
+                                        <a onclick="aboutSkillsFunction()" class="nav-link" href="#about&skills"
+                                            title="">About</a>
                                     </li>
                                     <li class="navbar-item">
-                                        <a class="nav-link" href="#about&skills" title="">Skills</a>
+                                        <a onclick="aboutSkillsFunction()" class="nav-link" href="#about&skills"
+                                            title="">Skills</a>
                                     </li>
                                     <li class="navbar-item">
-                                        <a class="nav-link" href="#projects" title="">Projects</a>
+                                        <a onclick="projectFunction()" class="nav-link" href="#projects"
+                                            title="">Projects</a>
                                     </li>
                                     <li class="navbar-item">
-                                        <a class="nav-link" href="#contact" title="">Contact</a>
+                                        <a onclick="contactFunction()" class="nav-link" href="#contact"
+                                            title="">Contact</a>
                                     </li>
                                     <li class="resume">
-                                        <a class="nav-link btn btn-info" href="CHIKA_U.%20OSUAGWU_Resume.pdf" target="_blank" title="">Resume</a>
+                                        <a class="nav-link btn btn-resume" href="Chika_Osuagwu_Resume_.pdf"
+                                            target="_blank" title="">Resume</a>
                                     </li>
                                 </ul>
                             </div>
@@ -109,14 +120,17 @@
         </div>
     </header>
 
-    <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+    <div id="homeCarousel" class="carousel slide" data-ride="carousel" data-interval="2500">
         <div class="carousel-inner">
             <div class="carousel-item carousel-image bg-img-1 active">
                 <div class="carousel-caption d-sm-block">
                     <div class="box-slider-text">
-                        <h2 class="slide-title animate__animated animate__slideInLeft d-none d-md-block">Hi,</h2>
-                        <h3 class="slide-sub-title animate__animated animate__slideInRight">I'm Chika</h3>
-                        <p class="slide-box-description animate__animated animate__slideInLeft">A Fullstack Developer
+                        <h2 class="slide-title animated bounceInLeft" style="animation-delay: 500ms">Hi, <span>I'm
+                                Chika</span></h2>
+                        <p class="slide-box-description animated bounceInRight" style="animation-delay: 700ms">A
+                            Software Engineer
+                        </p>
+                        <p class="animated fadeInUp" style="animation-delay: 1s"><a href="#email" title="">Email me</a>
                         </p>
                     </div>
                 </div>
@@ -125,29 +139,30 @@
 
             <div class="carousel-item carousel-image bg-img-2">
                 <div class="carousel-caption d-sm-block">
-                    <div class="box-slider-text">
-                        <h2 class="slide-title-box animate__animated animate__slideInDown">Master's degree in
-                            Electrical Engineering </h2>
-                        <h3 class="slide-title animate__animated animate__fadeIn d-none d-md-block">With a burgeoning
-                            interest in software
-                            development
+                    <div>
+                        <h2 class="slide-title-box animated zoomInUp">Nucamp Certification in FrontEnd Web & Mobile
+                            Development
+                        </h2>
+                        <h3 class="slide-title-2 animated heartBeat">I design narrative user-interfaces for customers
                         </h3>
-                        <p class="animate__animated animate__slideInLeft">I double as a Fullstack
-                            Developer</p>
                     </div>
                 </div>
             </div>
 
             <div class="carousel-item carousel-image bg-img-3">
                 <div class="carousel-caption">
-                    <div class="box-slider-text">
-                        <h2 class="slide-title animate__animated animate__slideInDown">Proficient in MERN stack</h2>
-                        <h3 class="slide-title animate__animated animate__fadeIn d-none d-md-block">I leverage my skills
-                            and expertise to
-                            design and
-                            improve user-focused websites and applications</h3>
-                        <p class="slide-title-box animate__animated animate__slideInLeft">Projects</p>
+                    <div class="box-slider">
+                        <div class="fixed-text">Proficient In</div>
+                        <div class="slide-title-box-2">
+                            <div>
+                                <span>Frontend Web Development</span>
+                            </div>
+
+                        </div>
                     </div>
+                    <p class="slide-title-projects animate__animated animate__slideInLeft"><a href="#projects"
+                            title="">Projects</a></p>
+
                 </div>
             </div>
         </div>
@@ -167,56 +182,76 @@
         </a>
     </div>
 
-    <div id="about&skills" class="container">
+    <div class="blockquote-section">
+        <div class="card mt-3">
+            <blockquote class="blockquote text-center card-body">
+                <p class="mb-2">Hardwork beats talent when talent fails to work hard</p>
+                <footer class="blockquote-footer">Tim Notke</footer>
+            </blockquote>
+        </div>
+    </div>
+
+
+    <div id="" class="container">
         <div class="row row-content">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="about_section-content">
-                    <h3 class="section_subtitle">About</h3>
-                    <h2 class="section_title">Get to know me!</h2>
+                    <h3 class="section_subtitle mb-4 text-center font-weight-bold">Get to know me!</h3>
                     <p class="section_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-                        consequatur repellendus ex exercitationem et, quos omnis debitis
-                        odit, aspernatur cum corporis. Consequatur, officia. Voluptatum
-                        deleniti, eum debitis eius adipisci consectetur!
+                        Detail-oriented <span class="font-weight-bold">Frontend focused</span> Web developer but also
+                        familiar with <span class="font-weight-bold">backend technology</span>. I love
+                        to build <span class="font-weight-bold">intuitive optimized websites</span> and web applications
+                        that lead to overall success of products.
+                    </p>
+                    <p class="section_description">Hardwork,
+                        passion and determination are my foundation for success. My ability to learn fast, collaborate
+                        and adapt in
+                        any environment is one of my strengths.
+                    </p>
+                    <p class="section_description">I am open to job opportunities where i can contribute, learn and
+                        grow.
+                        Don't hesitate to <a class="contact_me" href="#contactme" title="">contact</a> me if you have an
+                        opportunity that matches my skills and experience.
                     </p>
 
                     <div class="about_section-item d-flex align-items-center">
-                        <p class="section_description d-flex align-items-center gap-2">
-                            Lorem ipsum dolor sit
-                            amet.
+                        <p class="section_description d-flex align-items-center font-weight-bold">
+                            <i class="fa fa-check-circle mr-1" aria-hidden="true"></i>Responsive Design.
                         </p>
 
-                        <p class="section_description d-flex align-items-center gap-2">
-                            Lorem ipsum dolor sit
-                            amet.
+                        <p class="section_description d-flex align-items-center font-weight-bold">
+                            <i class="fa fa-check-circle mr-1" aria-hidden="true"></i>User Experience.
                         </p>
                     </div>
                     <div class="about_section-item d-flex align-items-center">
-                        <p class="section_description d-flex align-items-center gap-2">
-                            Lorem ipsum dolor sit
-                            amet.
+                        <p class="section_description d-flex align-items-center font-weight-bold">
+                            <i class="fa fa-check-circle mr-1" aria-hidden="true"></i>Web Development.
                         </p>
 
-                        <p class="section_description d-flex align-items-center gap-2">
-                            <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
-                            amet.
+                        <p class="section_description d-flex align-items-center font-weight-bold">
+                            <i class="fa fa-check-circle mr-1" aria-hidden="true"></i> Team Player.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 about_content-skills">
-                <h3 class="about_content-title mb-5">My Skills</h3>
-                <div class="skills">
-                    <div class="skills_skill">HTML</div>
-                    <div class="skills_skill">CSS</div>
-                    <div class="skills_skill">Javascript</div>
-                    <div class="skills_skill">React</div>
+            <div class="col-md-7 about_content-skills">
+                <h3 class="about_content-title mb-4 text-center font-weight-bold">My Skills</h3>
+                <div class="skills" id="skillz">
+                    <div class="skills_skill">Javascript(ES6)</div>
+                    <div class="skills_skill">React/React Native</div>
                     <div class="skills_skill">Typescript</div>
+                    <div class="skills_skill">Python</div>
+                    <div class="skills_skill">Database (MySQL, PostgreSQL)</div>
+                    <div class="skills_skill">Rest APIs</div>
                     <div class="skills_skill">GIT</div>
                     <div class="skills_skill">NodeJs</div>
-                    <div class="skills_skill">PostgreSQL</div>
+                    <div class="skills_skill">Automation Testing (Jest, Cypress)</div>
+                    <div class="skills_skill">jQuery</div>
                     <div class="skills_skill">Bootstrap</div>
+                    <div class="skills_skill">HTML5</div>
+                    <div class="skills_skill">CSS (SASS)</div>
+                    <div class="skills_skill">Prototyping & Wireframing (Figma, Adobe XD)</div>
                 </div>
             </div>
         </div>
@@ -224,90 +259,162 @@
 
     <div id="projects" class="container">
         <div class="row row-content">
-            <div class="col-12 text-center mb-5">
-                <h2>Projects</h2>
+            <div class="col-12 text-center mb-4">
+                <h2 class="font-weight-bold">Projects</h2>
             </div>
             <div class="col mb-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="http://via.placeholder.com/640x360" alt="" title="" />
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="images/RES.png" alt="" title="" />
                     <div class="card-body">
                         <h5 class="card-title">Restaurant App</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, explicabo.
+                        <p class="card-text">Food ordering app that is easy and quick to use. It's also aesthetically
+                            enganging for users.
                         </p>
+                        <div class="github">
+                            <a href="https://github.com/chikaosuagwu/Restaurant_app" target="_blank"
+                                class="btn btn-central" title="">GitHub</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="http://via.placeholder.com/640x360" alt="" title="" />
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="images/RAC.jpg" alt="" title="" />
                     <div class="card-body">
                         <h5 class="card-title">Car Rental Services</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, explicabo.
+                        <p class="card-text">Conveniently and efficiently book a car rental service from anywhere in the
+                            world.
                         </p>
+                        <div class="github">
+                            <a href="https://github.com/chikaosuagwu/Rent-A-Car" target="_blank" class="btn btn-central"
+                                title="">GitHub</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="col mb-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="http://via.placeholder.com/640x360" alt="" title="" />
+            <div class="col mb-0">
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="images/API.png" alt="" title="" />
                     <div class="card-body">
                         <h5 class="card-title">Simple Web API</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, explicabo.
+                        <p class="card-text">Fundamentals of NodeJs.
                         </p>
+                        <div class="github">
+                            <a href="https://github.com/chikaosuagwu/Simple-Web-API" target="_blank"
+                                class="btn btn-central" title="">GitHub</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="contact" class="container">
-        <div class="row row-content">
-            <div class="col-lg-6">
-                <h2>Contact Me</h2>
-                <p>I'm interested in a software developer position in a company where i can apply my skills to
+    <div class="container contact-style">
+        <div class="row row-content section-row">
+            <div class="picture col-sm-6">
+                <img src="images/ash.jpg" alt="Chika's picture" title="" />
+            </div>
+            <div class="col-md-6">
+                <h4 class="section-motivate-one">What Motivates Me Professionally?</h4>
+                <p class="section-motivate">𝑨 𝒈𝒐𝒐𝒅
+                    𝒘𝒐𝒓𝒌𝒊𝒏𝒈 𝒆𝒏𝒗𝒊𝒓𝒐𝒏𝒎𝒆𝒏𝒕 𝒕𝒉𝒂𝒕
+                    𝒂𝒑𝒑𝒓𝒆𝒄𝒊𝒂𝒕𝒆𝒔 𝒎𝒚 𝒗𝒂𝒍𝒖𝒆.</p>
+
+                <p class="section-motivate-two">I pride myself as someone who gets the job done no matter what it takes
+                    and in due time. As someone who is
+                    detail-oriented and result-driven, it gives me a sense of fulfillment when I see the results of my
+                    commitment to
+                    excellence, determination and focused efforts.</p>
+            </div>
+        </div>
+        <div id="contactme" class="row row-content">
+            <div class="col-lg-6 form-style" id="email">
+                <h2 class="mt-3 font-weight-bold">Contact Me</h2>
+                <p class="font-weight-bolder">I'm interested in a frontend developer position in a company where i can
+                    apply my skills to
                     user-focused projects
-                    that boost organizational performance</p>
-                <form>
+                    that boost organizational performance.</p>
+                <form action="https://formspree.io/f/xayzkgnq" method="POST">
                     <div class="col">
                         <div class="form-group row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Name" />
-                            </div>
-                            <div class="col">
-                                <input type="email" class="form-control" placeholder="Email" />
+                                <input type="text" name="Name" class="form-control" placeholder="Name" required />
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Subject" />
+                                <input type="email" name="Email" class="form-control" placeholder="Email" required />
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="9"></textarea>
+                            <textarea class="form-control" name="Message" rows="9" placeholder="Your Message"
+                                required></textarea>
                         </div>
                         <div class="form-group row">
                             <div class="col-md-10">
-                                <button type="submit" class="btn btn-primary">Send Message!</button>
+                                <button type="submit" class="btn btn-color">Send</button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
 
-            <figure class="col-lg-6">
+            <figure class="col-lg-6 d-none d-lg-block">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203134.07288060707!2d-121.981249233877!3d37.295847465507855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcae48af93ff5%3A0xb99d8c0aca9f717b!2sSan%20Jose%2C%20CA!5e0!3m2!1sen!2sus!4v1681627279875!5m2!1sen!2sus"
                     width="470" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade" id="iframe"></iframe>
             </figure>
         </div>
     </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-6">
+                    <h5 class="mb-4 font-weight-bold">CHIKA OSUAGWU</h5>
+                    <span>Detail-oriented Frontend focused Web developer but also
+                        familiar with Backend Technology.</span>
+                </div>
+                <div class="col-6 text-md-right">
+                    <h5 class="social-text">SOCIALS</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer-socials">
+                            <a href="https://github.com/chikaosuagwu" target="_blank" title="Github">
+                                <span><i class="fa fa-github" aria-hidden="true"></i></span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/chikaosuagwu" target="_blank" title="LinkedIn">
+                                <span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
+                            </a>
+                            <a href="https://www.instagram.com/o_suags/" target="_blank" title="Instagram">
+                                <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                            </a>
+                            <a href="https://twitter.com/chi_suags" target="_blank" title="Twitter">
+                                <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                            </a>
+                            <a href="https://codepen.io/chikaosuagwu/" title="Codepen">
+                                <span><i class="fa fa-codepen" aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center p-4">
+                © 2022 Copyright: chikaosuagwu
+            </div>
+        </div>
+    </footer>
 
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
+
+    <script src="js/scripts.js"> </script>
 
 
 </body>

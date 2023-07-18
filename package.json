@@ -14,7 +14,7 @@
     "lite-server": "^2.6.1"
   },
   "dependencies": {
-    "animate.css": "^4.1.1",
+    "animate.css": "^3.7.2",
     "bootstrap": "^4.5.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
